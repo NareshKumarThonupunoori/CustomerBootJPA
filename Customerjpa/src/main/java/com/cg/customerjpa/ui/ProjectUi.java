@@ -22,7 +22,7 @@ public class ProjectUi {
 			long id2 = customer2.getId();
 			Customer customer3 = add("Harish");
 			long id3 = customer3.getId();
-			customer2=updateName(4, "Ramesh");
+			customer2=updateName(2, "Ramesh");
 			//System.out.println(customer2.getName());
 		}
 		catch (CustomerNotFoundException e){

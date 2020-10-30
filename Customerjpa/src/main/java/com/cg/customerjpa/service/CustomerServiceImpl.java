@@ -31,10 +31,10 @@ public class CustomerServiceImpl implements ICustomerService {
 
 	@Override
 	public Customer updateName(long id, String name) {
+		ValidationUtil.checkName(name);
 		Customer customer=dao.findById(id);
 		customer.setName(name);
-		ValidationUtil.checkName(customer.getName());
-        customer=dao.update(customer);
+		customer=dao.update(customer);
         return customer;
 	}
 
